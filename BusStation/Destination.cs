@@ -12,11 +12,14 @@ namespace BusStation
         public int Price { get; set; }
         public int Distance { get; set; }
 
-        public Destination(Station station,string name, int price, int distance)
+        public List<Line> Lines { get; set; }
+
+        public Destination(Station station,int price, int distance)
         {
             this.station = station;
             Price = price;
             Distance = distance;
+            this.Lines = new List<Line>();
         }
         public override string ToString()
         {

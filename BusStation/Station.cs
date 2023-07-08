@@ -10,7 +10,7 @@ namespace BusStation
     {
         public string City { get; set; }
         public string Country { get; set; }
-        public List<Destination> Destinations { get; set;}
+        public List<Destination> destinations { get; set;}
 
         public Station() { }
 
@@ -18,6 +18,7 @@ namespace BusStation
         {
             City = city;
             Country = country;
+            destinations = new List<Destination>();
         }
 
         public override string ToString()

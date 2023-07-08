@@ -25,7 +25,7 @@ namespace BusStation
 
         public override string ToString()
         {
-            return String.Format("Name: {0} Last Name: {1} Number of Tickets: {2} Price: {3}MKD",Name, LastName,,NumberOfSeats, PriceTicket);
+            return String.Format("Name: {0} Last Name: {1} Number of Tickets: {2} Price: {3}MKD",Name, LastName,NumberOfSeats, PriceTicket);
         }
     }
 }
