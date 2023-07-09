@@ -132,7 +132,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddDestinationForm";
-            Text = "AddDestinationForm";
+            Text = "Додади дестинација";
             Load += AddDestinationForm_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);

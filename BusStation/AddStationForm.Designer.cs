@@ -109,7 +109,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddStationForm";
-            Text = "AddStationForm";
+            Text = "Додади станица";
             Load += AddStationForm_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);

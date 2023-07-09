@@ -18,7 +18,7 @@
             VelesStation = new Station("Велес", "Македонија");
             SkopjeStation = new Station("Скопје", "Македонија");
             PrilepStation = new Station("Прилеп", "Македонија");
-            BitolaStation.destinations.Add(new Destination(VelesStation,450, 120));
+            BitolaStation.destinations.Add(new Destination(VelesStation, 450, 120));
             BitolaStation.destinations.Add(new Destination(SkopjeStation, 600, 180));
             VelesStation.destinations.Add(new Destination(BitolaStation, 450, 120));
             VelesStation.destinations.Add(new Destination(SkopjeStation, 150, 60));
@@ -68,7 +68,7 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i < Stations.Count; i++)
+            for (int i = 0; i < Stations.Count; i++)
             {
                 lbStations.Items.Add(Stations[i]);
             }
@@ -180,14 +180,15 @@
 
         private void btnAddLine_Click(object sender, EventArgs e)
         {
-            if(lbStations.SelectedIndex == -1 || lbDestinations.SelectedIndex == -1) {
+            if (lbStations.SelectedIndex == -1 || lbDestinations.SelectedIndex == -1)
+            {
                 MessageBox.Show("За да додадете линија мора да имате селектирано појдовна станица и дестинациона станица!");
             }
             else
             {
                 AddLineForm addLineForm = new AddLineForm();
                 addLineForm.ShowDialog();
-                if(addLineForm.DialogResult == DialogResult.OK)
+                if (addLineForm.DialogResult == DialogResult.OK)
                 {
                     destination.Lines.Add(addLineForm.line);
                     loadLines();

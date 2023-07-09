@@ -29,7 +29,7 @@ namespace BusStation
             row.Cells[1].Value = ticket.LastName;
             row.Cells[2].Value = ticket.line.forPrint();
             row.Cells[3].Value = ticket.NumberOfSeats;
-            row.Cells[4].Value = ticket.PriceTicket;
+            row.Cells[4].Value = ticket.PriceTicket * ticket.NumberOfSeats;
             dgPrint.Rows.Add(row);
 
 

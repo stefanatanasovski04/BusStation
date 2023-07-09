@@ -105,7 +105,7 @@
             Controls.Add(dgPrint);
             Margin = new Padding(3, 4, 3, 4);
             Name = "PrintTicketForm";
-            Text = "PrintTicketForm";
+            Text = "Потврда за успешно резервиран билет";
             Load += PrintTicketForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgPrint).EndInit();
             ResumeLayout(false);

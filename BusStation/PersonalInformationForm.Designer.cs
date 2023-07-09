@@ -160,7 +160,7 @@
             Controls.Add(tbName);
             Margin = new Padding(3, 4, 3, 4);
             Name = "PersonalInformationForm";
-            Text = "PersonalInformationForm";
+            Text = "Информации за корисникот";
             Load += PersonalInformationForm_Load;
             ((System.ComponentModel.ISupportInitialize)nudNumberOfTickets).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();

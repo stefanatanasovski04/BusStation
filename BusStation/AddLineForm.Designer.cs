@@ -51,7 +51,7 @@
             // lblTakeoffDestination
             // 
             lblTakeoffDestination.AutoSize = true;
-            lblTakeoffDestination.Location = new Point(225, 20);
+            lblTakeoffDestination.Location = new Point(282, 9);
             lblTakeoffDestination.Name = "lblTakeoffDestination";
             lblTakeoffDestination.Size = new Size(15, 20);
             lblTakeoffDestination.TabIndex = 1;
@@ -101,7 +101,7 @@
             Controls.Add(lblTakeoffDestination);
             Controls.Add(dtpDate);
             Name = "AddLineForm";
-            Text = "AddLineForm";
+            Text = "Додади линија";
             Load += AddLineForm_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);

@@ -105,7 +105,7 @@
             btnBuy.Name = "btnBuy";
             btnBuy.Size = new Size(182, 99);
             btnBuy.TabIndex = 6;
-            btnBuy.Text = "Купи карта";
+            btnBuy.Text = "Резервирај";
             btnBuy.UseVisualStyleBackColor = true;
             btnBuy.Click += btnBuy_Click;
             // 

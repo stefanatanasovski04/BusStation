@@ -19,35 +19,12 @@ namespace BusStation
         public AddDestinationForm()
         {
             InitializeComponent();
+            findAdequateDestinations();
+           
 
-            for (int i = 0; i < Form1.Stations.Count; i++)
-            {
-                bool Found = false;
-                Station item = Form1.Stations[i];
-                if (Form1.station.City == Form1.Stations[i].City)
-                {
-                    continue;
-                }
-                else
-                {
-                    for (int j = 0; j < Form1.station.destinations.Count; j++)
-                    {
-                        if (item.City == Form1.station.destinations[j].station.City)
-                        {
-                            Found = true;
-                            break;
-                        }
-                    }
-                    if (!Found)
-                    {
-                        lbStationsInAdd.Items.Add(item);
-                    }
-                }
-            }
+        }
 
-        }     
-            
- 
+
         private void AddDestinationForm_Load(object sender, EventArgs e)
         {
 
@@ -74,6 +51,34 @@ namespace BusStation
         private void btnCancelAddDestination_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void findAdequateDestinations()
+        {
+            for (int i = 0; i < Form1.Stations.Count; i++)
+            {
+                bool Found = false;
+                Station item = Form1.Stations[i];
+                if (Form1.station.City == Form1.Stations[i].City)
+                {
+                    continue;
+                }
+                else
+                {
+                    for (int j = 0; j < Form1.station.destinations.Count; j++)
+                    {
+                        if (item.City == Form1.station.destinations[j].station.City)
+                        {
+                            Found = true;
+                            break;
+                        }
+                    }
+                    if (!Found)
+                    {
+                        lbStationsInAdd.Items.Add(item);
+                    }
+                }
+            }
         }
 
         private void tbPrice_Validating(object sender, CancelEventArgs e)
