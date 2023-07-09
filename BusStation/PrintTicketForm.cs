@@ -27,7 +27,7 @@ namespace BusStation
             DataGridViewRow row = (DataGridViewRow)dgPrint.Rows[0].Clone();
             row.Cells[0].Value = ticket.Name;
             row.Cells[1].Value = ticket.LastName;
-            row.Cells[2].Value = ticket.line;
+            row.Cells[2].Value = ticket.line.forPrint();
             row.Cells[3].Value = ticket.NumberOfSeats;
             row.Cells[4].Value = ticket.PriceTicket;
             dgPrint.Rows.Add(row);

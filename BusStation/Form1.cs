@@ -5,6 +5,7 @@
         public Station BitolaStation;
         public Station VelesStation;
         public Station SkopjeStation;
+        public Station PrilepStation;
         public static Line line;
         public static Station station;
         public static Destination destination;
@@ -16,30 +17,61 @@
             BitolaStation = new Station("Битола", "Македонија");
             VelesStation = new Station("Велес", "Македонија");
             SkopjeStation = new Station("Скопје", "Македонија");
-            BitolaStation.destinations.Add(new Destination(VelesStation, 120, 450));
-            BitolaStation.destinations.Add(new Destination(SkopjeStation, 180, 600));
-            VelesStation.destinations.Add(new Destination(BitolaStation, 120, 450));
-            VelesStation.destinations.Add(new Destination(SkopjeStation, 60, 150));
-            SkopjeStation.destinations.Add(new Destination(BitolaStation, 180, 600));
-            SkopjeStation.destinations.Add(new Destination(VelesStation, 60, 150));
+            PrilepStation = new Station("Прилеп", "Македонија");
+            BitolaStation.destinations.Add(new Destination(VelesStation,450, 120));
+            BitolaStation.destinations.Add(new Destination(SkopjeStation, 600, 180));
+            VelesStation.destinations.Add(new Destination(BitolaStation, 450, 120));
+            VelesStation.destinations.Add(new Destination(SkopjeStation, 150, 60));
+            SkopjeStation.destinations.Add(new Destination(BitolaStation, 600, 180));
+            SkopjeStation.destinations.Add(new Destination(VelesStation, 150, 60));
 
             SkopjeStation.destinations[0].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[0], new DateTime(2023, 5, 1, 8, 30, 00)));
             SkopjeStation.destinations[0].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[0], new DateTime(2023, 5, 1, 9, 30, 00)));
             SkopjeStation.destinations[0].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[0], new DateTime(2023, 5, 1, 10, 30, 00)));
             SkopjeStation.destinations[0].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[0], new DateTime(2023, 5, 1, 11, 30, 00)));
             SkopjeStation.destinations[0].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[0], new DateTime(2023, 5, 1, 12, 30, 00)));
+            SkopjeStation.destinations[1].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[1], new DateTime(2023, 5, 1, 8, 30, 00)));
+            SkopjeStation.destinations[1].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[1], new DateTime(2023, 5, 1, 9, 30, 00)));
+            SkopjeStation.destinations[1].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[1], new DateTime(2023, 5, 1, 10, 30, 00)));
+            SkopjeStation.destinations[1].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[1], new DateTime(2023, 5, 1, 11, 30, 00)));
+            SkopjeStation.destinations[1].Lines.Add(new Line(SkopjeStation, SkopjeStation.destinations[1], new DateTime(2023, 5, 1, 12, 30, 00)));
+
+            BitolaStation.destinations[0].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[0], new DateTime(2023, 5, 1, 8, 30, 00)));
+            BitolaStation.destinations[0].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[0], new DateTime(2023, 5, 2, 8, 30, 00)));
+            BitolaStation.destinations[0].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[0], new DateTime(2023, 6, 1, 9, 30, 00)));
+            BitolaStation.destinations[0].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[0], new DateTime(2023, 6, 2, 8, 30, 00)));
+            BitolaStation.destinations[0].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[0], new DateTime(2023, 7, 1, 11, 30, 00)));
+            BitolaStation.destinations[1].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[1], new DateTime(2023, 5, 1, 8, 30, 00)));
+            BitolaStation.destinations[1].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[1], new DateTime(2023, 5, 2, 8, 30, 00)));
+            BitolaStation.destinations[1].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[1], new DateTime(2023, 6, 1, 9, 30, 00)));
+            BitolaStation.destinations[1].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[1], new DateTime(2023, 6, 2, 8, 30, 00)));
+            BitolaStation.destinations[1].Lines.Add(new Line(BitolaStation, BitolaStation.destinations[1], new DateTime(2023, 7, 1, 11, 30, 00)));
+
+            VelesStation.destinations[0].Lines.Add(new Line(VelesStation, VelesStation.destinations[0], new DateTime(2023, 5, 1, 8, 30, 00)));
+            VelesStation.destinations[0].Lines.Add(new Line(VelesStation, VelesStation.destinations[0], new DateTime(2023, 5, 2, 8, 30, 00)));
+            VelesStation.destinations[0].Lines.Add(new Line(VelesStation, VelesStation.destinations[0], new DateTime(2023, 6, 1, 9, 30, 00)));
+            VelesStation.destinations[0].Lines.Add(new Line(VelesStation, VelesStation.destinations[0], new DateTime(2023, 6, 2, 8, 30, 00)));
+            VelesStation.destinations[0].Lines.Add(new Line(VelesStation, VelesStation.destinations[0], new DateTime(2023, 7, 1, 11, 30, 00)));
+            VelesStation.destinations[1].Lines.Add(new Line(VelesStation, VelesStation.destinations[1], new DateTime(2023, 5, 1, 8, 30, 00)));
+            VelesStation.destinations[1].Lines.Add(new Line(VelesStation, VelesStation.destinations[1], new DateTime(2023, 5, 2, 8, 30, 00)));
+            VelesStation.destinations[1].Lines.Add(new Line(VelesStation, VelesStation.destinations[1], new DateTime(2023, 6, 1, 9, 30, 00)));
+            VelesStation.destinations[1].Lines.Add(new Line(VelesStation, VelesStation.destinations[1], new DateTime(2023, 6, 2, 8, 30, 00)));
+            VelesStation.destinations[1].Lines.Add(new Line(VelesStation, VelesStation.destinations[1], new DateTime(2023, 7, 1, 11, 30, 00)));
+
             //var date1 = new DateTime(2008, 5, 1, 8, 30, 52);
             Stations.Add(BitolaStation);
             Stations.Add(SkopjeStation);
             Stations.Add(VelesStation);
+            Stations.Add(PrilepStation);
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lbStations.Items.Add(BitolaStation);
-            lbStations.Items.Add(VelesStation);
-            lbStations.Items.Add(SkopjeStation);
+            for(int i = 0; i < Stations.Count; i++)
+            {
+                lbStations.Items.Add(Stations[i]);
+            }
         }
 
         private void loadLines()
@@ -70,40 +102,55 @@
 
         private void lbStations_SelectedIndexChanged(object sender, EventArgs e)
         {
+            station = lbStations.SelectedItem as Station;
             loadDestinations();
             lbLines.Items.Clear();
+
         }
 
         private void lbStations_SelectedValueChanged(object sender, EventArgs e)
         {
+            station = lbStations.SelectedItem as Station;
             loadDestinations();
             lbLines.Items.Clear();
+
         }
 
         private void lbDestinations_SelectedIndexChanged(object sender, EventArgs e)
         {
+            destination = lbDestinations.SelectedItem as Destination;
             loadLines();
         }
 
         private void lbDestinations_SelectedValueChanged(object sender, EventArgs e)
         {
+            destination = lbDestinations.SelectedItem as Destination;
             loadLines();
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            PersonalInformationForm personalInformationForm = new PersonalInformationForm();
-            line = lbLines.SelectedItem as Line;
-            if (personalInformationForm.ShowDialog() == DialogResult.OK)
+            if (lbLines.SelectedIndex == -1)
             {
-                loadLines();
+                MessageBox.Show("Мора да одберете линија!");
             }
+            else
+            {
+                PersonalInformationForm personalInformationForm = new PersonalInformationForm();
+                line = lbLines.SelectedItem as Line;
+                if (personalInformationForm.ShowDialog() == DialogResult.OK)
+                {
+                    loadLines();
+                }
+            }
+
         }
 
         private void btnAddStation_Click(object sender, EventArgs e)
         {
             AddStationForm addStationForm = new AddStationForm();
             addStationForm.ShowDialog();
+
 
             if (addStationForm.DialogResult == DialogResult.OK)
             {
@@ -118,7 +165,8 @@
             {
                 MessageBox.Show("Мора да селектирате појдовна станица!");
             }
-            else{
+            else
+            {
                 station = lbStations.SelectedItem as Station;
                 AddDestinationForm addDestinationForm = new AddDestinationForm();
                 addDestinationForm.ShowDialog();
@@ -127,7 +175,24 @@
                     lbDestinations.Items.Add(addDestinationForm.destination);
                 }
             }
-            
+
+        }
+
+        private void btnAddLine_Click(object sender, EventArgs e)
+        {
+            if(lbStations.SelectedIndex == -1 || lbDestinations.SelectedIndex == -1) {
+                MessageBox.Show("За да додадете линија мора да имате селектирано појдовна станица и дестинациона станица!");
+            }
+            else
+            {
+                AddLineForm addLineForm = new AddLineForm();
+                addLineForm.ShowDialog();
+                if(addLineForm.DialogResult == DialogResult.OK)
+                {
+                    destination.Lines.Add(addLineForm.line);
+                    loadLines();
+                }
+            }
         }
     }
 }

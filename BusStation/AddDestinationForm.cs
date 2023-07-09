@@ -19,12 +19,35 @@ namespace BusStation
         public AddDestinationForm()
         {
             InitializeComponent();
-            foreach (Station item in Form1.Stations)
-            {
-                lbStationsInAdd.Items.Add(item);
-            }
-        }
 
+            for (int i = 0; i < Form1.Stations.Count; i++)
+            {
+                bool Found = false;
+                Station item = Form1.Stations[i];
+                if (Form1.station.City == Form1.Stations[i].City)
+                {
+                    continue;
+                }
+                else
+                {
+                    for (int j = 0; j < Form1.station.destinations.Count; j++)
+                    {
+                        if (item.City == Form1.station.destinations[j].station.City)
+                        {
+                            Found = true;
+                            break;
+                        }
+                    }
+                    if (!Found)
+                    {
+                        lbStationsInAdd.Items.Add(item);
+                    }
+                }
+            }
+
+        }     
+            
+ 
         private void AddDestinationForm_Load(object sender, EventArgs e)
         {
 

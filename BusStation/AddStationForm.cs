@@ -36,6 +36,7 @@ namespace BusStation
         private void btnCancelAddStation_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         private void tbCity_Validating(object sender, CancelEventArgs e)

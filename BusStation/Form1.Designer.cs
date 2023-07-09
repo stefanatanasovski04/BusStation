@@ -37,6 +37,7 @@
             btnBuy = new Button();
             btnAddStation = new Button();
             btnAddDestination = new Button();
+            btnAddLine = new Button();
             SuspendLayout();
             // 
             // lbStations
@@ -99,10 +100,10 @@
             // 
             // btnBuy
             // 
-            btnBuy.Location = new Point(1072, 395);
+            btnBuy.Location = new Point(976, 415);
             btnBuy.Margin = new Padding(3, 4, 3, 4);
             btnBuy.Name = "btnBuy";
-            btnBuy.Size = new Size(86, 31);
+            btnBuy.Size = new Size(182, 99);
             btnBuy.TabIndex = 6;
             btnBuy.Text = "Купи карта";
             btnBuy.UseVisualStyleBackColor = true;
@@ -128,11 +129,22 @@
             btnAddDestination.UseVisualStyleBackColor = true;
             btnAddDestination.Click += btnAddDestination_Click;
             // 
+            // btnAddLine
+            // 
+            btnAddLine.Location = new Point(37, 485);
+            btnAddLine.Name = "btnAddLine";
+            btnAddLine.Size = new Size(235, 29);
+            btnAddLine.TabIndex = 9;
+            btnAddLine.Text = "Додади линија";
+            btnAddLine.UseVisualStyleBackColor = true;
+            btnAddLine.Click += btnAddLine_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1198, 591);
+            Controls.Add(btnAddLine);
             Controls.Add(btnAddDestination);
             Controls.Add(btnAddStation);
             Controls.Add(btnBuy);
@@ -160,5 +172,6 @@
         private Button btnBuy;
         private Button btnAddStation;
         private Button btnAddDestination;
+        private Button btnAddLine;
     }
 }

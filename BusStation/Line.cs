@@ -22,7 +22,20 @@ namespace BusStation
         }
 
        public override string ToString() {
-            return String.Format("{0}  {1} - {2} Слободни места: {3} ", dateTime, TakeOffStation.City, destination.station.City,availableSeats);
+            return String.Format("{0} {1}-{2} Слободни места: {3} ", dateTime, TakeOffStation.City, destination.station.City,availableSeats);
+        }
+        public string forPrint()
+        {
+            return String.Format("{0}.{1}  {2}:{3} {4}-{5}", dateTime.Day, dateTime.Month, dateTime.Hour, dateTime.Minute, slice(TakeOffStation.City), slice(destination.station.City));
+        }
+        public string slice(string name)
+        {
+            string tmp = "";
+            for(int i = 0; i < 2; i++)
+            {
+                tmp += name[i];
+            }
+            return tmp.ToUpper();
         }
 
         
