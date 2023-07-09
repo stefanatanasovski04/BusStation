@@ -23,7 +23,7 @@ namespace BusStation
         }
         public override string ToString()
         {
-            return String.Format("{0} {1}km {2}MKD",station,Price,Distance);
+            return String.Format("{0} {1}km {2}MKD",station,Distance, Price);
         }
     }
 }

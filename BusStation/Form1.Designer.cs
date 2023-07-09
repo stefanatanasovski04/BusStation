@@ -35,16 +35,17 @@
             label3 = new Label();
             lbLines = new ListBox();
             btnBuy = new Button();
+            btnAddStation = new Button();
+            btnAddDestination = new Button();
             SuspendLayout();
             // 
             // lbStations
             // 
             lbStations.FormattingEnabled = true;
-            lbStations.ItemHeight = 15;
-            lbStations.Location = new Point(32, 32);
-            lbStations.Margin = new Padding(3, 2, 3, 2);
+            lbStations.ItemHeight = 20;
+            lbStations.Location = new Point(37, 43);
             lbStations.Name = "lbStations";
-            lbStations.Size = new Size(159, 259);
+            lbStations.Size = new Size(181, 344);
             lbStations.TabIndex = 0;
             lbStations.SelectedIndexChanged += lbStations_SelectedIndexChanged;
             lbStations.SelectedValueChanged += lbStations_SelectedValueChanged;
@@ -52,20 +53,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 14);
+            label1.Location = new Point(37, 19);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(68, 20);
             label1.TabIndex = 1;
             label1.Text = "Станици";
             // 
             // lbDestinations
             // 
             lbDestinations.FormattingEnabled = true;
-            lbDestinations.ItemHeight = 15;
-            lbDestinations.Location = new Point(214, 32);
-            lbDestinations.Margin = new Padding(3, 2, 3, 2);
+            lbDestinations.ItemHeight = 20;
+            lbDestinations.Location = new Point(245, 43);
             lbDestinations.Name = "lbDestinations";
-            lbDestinations.Size = new Size(330, 259);
+            lbDestinations.Size = new Size(377, 344);
             lbDestinations.TabIndex = 2;
             lbDestinations.SelectedIndexChanged += lbDestinations_SelectedIndexChanged;
             lbDestinations.SelectedValueChanged += lbDestinations_SelectedValueChanged;
@@ -73,46 +73,68 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(214, 15);
+            label2.Location = new Point(245, 20);
             label2.Name = "label2";
-            label2.Size = new Size(73, 15);
+            label2.Size = new Size(93, 20);
             label2.TabIndex = 3;
             label2.Text = "Дестинации";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(561, 15);
+            label3.Location = new Point(641, 20);
             label3.Name = "label3";
-            label3.Size = new Size(43, 15);
+            label3.Size = new Size(55, 20);
             label3.TabIndex = 4;
             label3.Text = "Линии";
             // 
             // lbLines
             // 
             lbLines.FormattingEnabled = true;
-            lbLines.ItemHeight = 15;
-            lbLines.Location = new Point(561, 32);
-            lbLines.Margin = new Padding(3, 2, 3, 2);
+            lbLines.ItemHeight = 20;
+            lbLines.Location = new Point(641, 43);
             lbLines.Name = "lbLines";
-            lbLines.Size = new Size(452, 259);
+            lbLines.Size = new Size(516, 344);
             lbLines.TabIndex = 5;
             // 
             // btnBuy
             // 
-            btnBuy.Location = new Point(938, 296);
+            btnBuy.Location = new Point(1072, 395);
+            btnBuy.Margin = new Padding(3, 4, 3, 4);
             btnBuy.Name = "btnBuy";
-            btnBuy.Size = new Size(75, 23);
+            btnBuy.Size = new Size(86, 31);
             btnBuy.TabIndex = 6;
             btnBuy.Text = "Купи карта";
             btnBuy.UseVisualStyleBackColor = true;
             btnBuy.Click += btnBuy_Click;
             // 
+            // btnAddStation
+            // 
+            btnAddStation.Location = new Point(37, 415);
+            btnAddStation.Name = "btnAddStation";
+            btnAddStation.Size = new Size(235, 29);
+            btnAddStation.TabIndex = 7;
+            btnAddStation.Text = "Додади станица";
+            btnAddStation.UseVisualStyleBackColor = true;
+            btnAddStation.Click += btnAddStation_Click;
+            // 
+            // btnAddDestination
+            // 
+            btnAddDestination.Location = new Point(37, 450);
+            btnAddDestination.Name = "btnAddDestination";
+            btnAddDestination.Size = new Size(235, 29);
+            btnAddDestination.TabIndex = 8;
+            btnAddDestination.Text = "Додади дестинација";
+            btnAddDestination.UseVisualStyleBackColor = true;
+            btnAddDestination.Click += btnAddDestination_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1048, 443);
+            ClientSize = new Size(1198, 591);
+            Controls.Add(btnAddDestination);
+            Controls.Add(btnAddStation);
             Controls.Add(btnBuy);
             Controls.Add(lbLines);
             Controls.Add(label3);
@@ -120,7 +142,6 @@
             Controls.Add(lbDestinations);
             Controls.Add(label1);
             Controls.Add(lbStations);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Билетара";
             Load += Form1_Load;
@@ -137,5 +158,7 @@
         private Label label3;
         private ListBox lbLines;
         private Button btnBuy;
+        private Button btnAddStation;
+        private Button btnAddDestination;
     }
 }
